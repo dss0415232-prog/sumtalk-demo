@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>숲톡 관리자</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="top"><a class="brand" href="./"><i>🌲</i>숲톡 관리자</a><nav><a href="./">국민용 화면</a><a href="compare.html">기존 vs 숲톡</a><a href="deck.html">발표자료</a></nav></header>
+<div class="mock" id="mockbar">직원 전용 화면입니다. 시연용 모의 로그가 포함되어 있으며, 수치는 실제 성과가 아니라 시범 적용 시 측정할 KPI 예시입니다.</div>
+<div id="login" class="wide" style="max-width:420px;padding-top:60px"><div class="panel"><h3>관리자 로그인</h3><div class="fld"><input type="password" id="pw" placeholder="비밀번호(시연 기본값: demo1234)"></div><button class="btn" id="go">로그인</button><div class="err" id="lerr"></div></div></div>
+<div id="app" class="wide" style="display:none">
+<div class="tabs" id="tabs"></div><div id="view"></div></div>
+<script src="config.js"></script><script src="bridge.js"></script><script src="admin.js"></script></body></html>
