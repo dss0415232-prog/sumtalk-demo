@@ -1,0 +1,23 @@
+name = "sumtalk-complaints"
+main = "complaints_worker.js"
+compatibility_date = "2026-10-01"
+# DB ID must be set locally; never commit secret values.
+[[d1_databases]]
+binding = "DB"
+database_name = "sumtalk-private"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+[[kv_namespaces]]
+binding = "LIMITS"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+[vars]
+ALLOW_ORIGIN = "https://YOURNAME.github.io"
+ACCESS_TEAM_DOMAIN = "https://YOURTEAM.cloudflareaccess.com"
+ACCESS_AUD = "REPLACE_WITH_ACCESS_APPLICATION_AUD"
+
+[assets]
+directory = "./staff_assets"
+binding = "ASSETS"
+run_worker_first = true
+
+[triggers]
+crons = ["0 3 * * *"] # UTC; retention days unset until approved
